@@ -26,12 +26,9 @@ print("ACCOUNT NUMBER:", account. account_number)
 account.check_balance()
 account .deposit (1500)
 account.withdraw(2000)
-account .withdraw(6000)
-# Tests insufficient balance
+account .withdraw(6000)  # Tests insufficient balance
 
-account.deposit (-500)
-
-# Tests invalid deposit
+account.deposit (-500)   # Tests invalid deposit
 
 account .withdraw(0)
 
