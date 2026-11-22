@@ -5,13 +5,11 @@ FIELDS = ["Roll No", "Name", "Marks"]
 def load_records():
 if not FILE.exists() :
 return []
-with FILE. open("r",
-open("r", newline="", encoding="utf-8") as f:
+with FILE. open("r",open("r", newline="", encoding="utf-8") as f:
 return list(csv.DictReader(f))
 def save_records (records ) :
 with FILE.open("w", newline="", encoding="utf-8") as f:
 writer = csv.DictWriter(f, fieldnames=FIELDS)
-writer -
 writer.writeheader()
 writer.writerows (records)
 def add_student (roll, name, marks):
@@ -36,14 +34,9 @@ records = load_records()
 if not records:
 print("No student records found.")
 return
-print("\nROLL NO
-NAME
+print("\nROLL NO  NAME  MARKS")
 
-MARKS")
-
-print (" -----
-
--")
+print (" -----------")
 
 for r in records :
 print(f' {r["Roll No"] :< 9} {r["Name"] :< 16} {r["Marks"]}'
@@ -57,12 +50,10 @@ def update_student(roll, new_marks):
 records = load_records ()
 for r in records :
 if r["Roll No"] == roll:
-f not (0 <= new_marks <= 100):
-+("Marks
+if not (0 <= new_marks <= 100):
 print("Marks must be between 0 and 100.")
 return
-r["Marks"] :
-"1 = str(new_marks)
+r["Marks"] = str(new_marks)
 save_records (records )
 print("Student record updated successfully.")
 return
