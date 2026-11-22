@@ -2,16 +2,13 @@ import csv
 INPUT_FILE = "employees. csv"
 # Sample employee data: Basic salary, HRA and DA.
 sample_employees = [
-{"Emp ID": "E101", "Name": "Ananya", "Basic":
+{"Emp ID": "E101", "Name": "Ananya", "Basic": "3000",
 "HRA": "6000", "DA": "3000"},
-
-"30000"
 {"Emp ID": "E102", "Name": "Rahul", "Basic": "40000",
 "HRA": "8000", "DA": "4000"},
-"Emp ID": "E103", "Name": "Meera",
-"Basic": "25000",
-
+{"Emp ID": "E103", "Name": "Meera","Basic": "25000",
 "HRA": "5000", "DA": "2500"}
+  }
 with open(INPUT FILE, "w", newline="", encoding="utf-8") as f:
 writer = csv.DictWriter(
 f, fieldnames=["Emp ID", "Name", "Basic", "HRA", "DA"]
@@ -24,7 +21,7 @@ total_gross = 0
 total_deduction = 0
 total_net = 0
 print("PAYROLL SUMMARY")
-print(" -" *
+print(" -" * 75)
 print(f'{"ID" :< 8}{"NAME" :< 12}{"GROSS":>12}{"DEDUCTION":>15}{"NET SALARY":>15}')
 print("-" * 75)
 with open(INPUT_FILE, "r", newline="", encoding="utf-8") as f:
