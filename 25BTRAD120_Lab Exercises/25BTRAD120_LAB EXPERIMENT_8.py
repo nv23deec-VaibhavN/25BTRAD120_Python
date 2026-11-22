@@ -68,4 +68,7 @@ print("Exiting Contact Book ... ")
 break
 else:
 print("Invalid choice!")
+break
+else:
+print("Invalid choice!")
 print("Contact not found!")
