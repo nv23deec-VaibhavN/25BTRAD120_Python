@@ -36,7 +36,7 @@ print("No student records found.")
 return
 print("\nROLL NO  NAME  MARKS")
 
-print (" -----------")
+print (" --------------------")
 
 for r in records :
 print(f' {r["Roll No"] :< 9} {r["Name"] :< 16} {r["Marks"]}'
