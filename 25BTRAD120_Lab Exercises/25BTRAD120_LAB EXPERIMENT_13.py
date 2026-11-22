@@ -34,7 +34,7 @@ try:
 basic = float(emp["Basic"]
 hra = float(emp["HRA"])
 da = float (emp["DA"])
-if min(basic, hra,
+if min(basic, hra, da)<0:
 raise ValueError
 gross = basic + hra + da
 pf = basic * 0.12
